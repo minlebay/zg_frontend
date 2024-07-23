@@ -3,7 +3,9 @@
     <h2>Message Detail</h2>
     <div v-if="message">
       <p><strong>ID:</strong> {{ message.uuid }}</p>
-      <p><strong>Content:</strong> {{ message.MessageContent }}</p>
+      <div class="json-container">
+        <pre><code>{{ formatJson(message.MessageContent) }}</code></pre>
+      </div>
     </div>
     <div v-else>
       <p>Loading...</p>
@@ -39,11 +41,36 @@ export default defineComponent({
 
     watch(() => props.id, fetchMessage, { immediate: true });
 
-    return { message };
+    const formatJson = (content) => {
+      try {
+        return JSON.stringify(JSON.parse(content), null, 2);
+      } catch (e) {
+        console.error('Failed to parse JSON content', e);
+        return content;
+      }
+    };
+
+    return { message, formatJson };
   }
 });
 </script>
 
 <style scoped>
-/* Add your styles here */
+.json-container {
+  color: #2c3e50;
+  padding: 20px;
+  border-radius: 8px;
+  overflow: auto;
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+}
+.json-container pre {
+  margin: 0;
+}
+.json-container code {
+  white-space: pre;
+  display: block;
+}
 </style>

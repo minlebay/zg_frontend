@@ -77,7 +77,7 @@ table {
 
 th, td {
   padding: 8px;
-  text-align: left;
+  text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

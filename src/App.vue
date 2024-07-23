@@ -37,20 +37,23 @@ export default defineComponent({
 });
 </script>
 
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
   color: #2c3e50;
-  align-content: center;
+  align-content: stretch;
 }
 
 .container {
   display: flex;
   justify-content: space-around;
+  align-items: flex-start;
 }
 
 .column {
-  width: 90%;
+  flex: 1 1 auto;
+  margin: 10px;
 }
 </style>
