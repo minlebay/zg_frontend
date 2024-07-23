@@ -42,7 +42,7 @@ export default defineComponent({
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  align-content: center;
 }
 
 .container {
@@ -51,6 +51,6 @@ export default defineComponent({
 }
 
 .column {
-  width: 45%;
+  width: 90%;
 }
 </style>
