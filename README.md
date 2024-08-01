@@ -54,16 +54,16 @@ src/
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/minlebay/zg_frontend.git
-   cd zg_frontend
-   ```
+```bash
+git clone https://github.com/minlebay/zg_frontend.git
+cd zg_frontend
+```
 
 2. Install dependencies:
 
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
 ### Running the Application
 
@@ -125,6 +125,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - Vue.js Documentation: [Vue.js](https://vuejs.org/)
 - OpenAPI Generator: [OpenAPI Generator](https://openapi-generator.tech/)
 
----
-
-Feel free to customize this README further based on any additional specifics or preferences you have for your project.
+--- 
